@@ -2,19 +2,20 @@
 export const CV = ({data}) => {   
    
     return (
-        <>
+        <div className="container">
          {/* header */}
         
             <header>
-                <p>{data.info.name}</p>
-                <p><span className="material-symbols-outlined">mail</span>{data.info.email}</p>
-                <p><span className="material-symbols-outlined">call</span>{data.info.phone}</p>
-                <p><span className="material-symbols-outlined">location_on</span>{data.info.address}</p>
+                <h2 className="name">{data.info.name}</h2>
+                <p className="flex"><span className="material-symbols-outlined">mail</span>{data.info.email}</p>
+                <p className="flex"><span className="material-symbols-outlined">call</span>{data.info.phone}</p>
+                <p className="flex"><span className="material-symbols-outlined">location_on</span>{data.info.address}<br></br>
+                {data.info.city}, {data.info.state}</p>
             </header>
         {/* education */}    
         
-            <div>
-            <span className="material-symbols-outlined"><h3>school Education</h3></span>
+            <div className="educationDiv">
+            <span className="material-symbols-outlined flex"><h3>school Education</h3></span>
                 <p>{data.education.school}</p>
                 <p>{data.education.degree}</p>
                 <p>{data.education.location}</p>
@@ -23,8 +24,8 @@ export const CV = ({data}) => {
             </div>
 
         {/* experience */} 
-            <div>
-            <span className="material-symbols-outlined"><h3>work Experience</h3></span>
+            <div className="experienceDiv">
+            <span ><h3 className="material-symbols-outlined flex">work Experience</h3></span>
                 <p>{data.experience.company}</p>
                 <p>{data.experience.title}</p>
                 <p>{data.experience.location}</p>
@@ -32,6 +33,6 @@ export const CV = ({data}) => {
                 <p>{data.experience.start}</p>
                 <p>{data.experience.end}</p>
             </div>
-        </>
+        </div>
     )    
 }

@@ -15,7 +15,7 @@
 }
 .cvDiv {
   max-width: 45%;
-  background-color: whitesmoke;
+ 
   color: black;
   border-radius: 10px;
  padding: 25px;
@@ -43,4 +43,30 @@
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+header {
+  padding: 25px;  
+  color: white;
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+  align-items: center;
+  text-align: center;
+  
+}
+.name {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+  text-align: end;
+}
+.educationDiv,
+.experienceDiv {
+  background-color: whitesmoke;
+
+}
+.container {
+  background-color: rgba(2, 2, 127, 0.475);
+}
+.flex {
+  display: flex;
+  justify-content: center;
 }

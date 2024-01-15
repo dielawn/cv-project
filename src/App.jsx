@@ -13,7 +13,9 @@ function App() {
         name: defaultInfo.info.name,
         email: defaultInfo.info.email,
         phone: defaultInfo.info.phone,
-        address: defaultInfo.info.address
+        address: defaultInfo.info.address,
+        city: defaultInfo.info.city,
+        state: defaultInfo.info.state
       },
       education:{
         school: defaultInfo.education.school,
