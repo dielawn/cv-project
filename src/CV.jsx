@@ -5,16 +5,16 @@ export const CV = ({data}) => {
         <>
          {/* header */}
         
-            <div>
+            <header>
                 <p>{data.info.name}</p>
-                <p>{data.info.email}</p>
-                <p>{data.info.phone}</p>
-                <p>{data.info.address}</p>
-            </div>
+                <p><span className="material-symbols-outlined">mail</span>{data.info.email}</p>
+                <p><span className="material-symbols-outlined">call</span>{data.info.phone}</p>
+                <p><span className="material-symbols-outlined">location_on</span>{data.info.address}</p>
+            </header>
         {/* education */}    
         
             <div>
-            <h3>Education</h3>
+            <span className="material-symbols-outlined"><h3>school Education</h3></span>
                 <p>{data.education.school}</p>
                 <p>{data.education.degree}</p>
                 <p>{data.education.location}</p>
@@ -24,7 +24,7 @@ export const CV = ({data}) => {
 
         {/* experience */} 
             <div>
-            <h3>Experience</h3>
+            <span className="material-symbols-outlined"><h3>work Experience</h3></span>
                 <p>{data.experience.company}</p>
                 <p>{data.experience.title}</p>
                 <p>{data.experience.location}</p>
