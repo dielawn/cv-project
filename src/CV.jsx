@@ -12,27 +12,26 @@ export const CV = ({data}) => {
                 <p className="flex"><span className="material-symbols-outlined">location_on</span>{data.info.address}<br></br>
                 {data.info.city}, {data.info.state}</p>
             </header>
-        {/* education */}    
-        
+
+        {/* education */}            
             <div className="educationDiv">
-            <span className="material-symbols-outlined flex"><h3>school Education</h3></span>
+            <span className="material-symbols-outlined flex topSpan"><h3 className="sectionHeader">school Education</h3></span>
+            <p className="dateRange">{data.education.start} - {data.education.end}<br></br>{data.education.location}</p>
                 <p>{data.education.school}</p>
                 <p>{data.education.degree}</p>
-                <p>{data.education.location}</p>
-                <p>{data.education.start}</p>
-                <p>{data.education.end}</p>
+                
             </div>
 
         {/* experience */} 
             <div className="experienceDiv">
-            <span ><h3 className="material-symbols-outlined flex">work Experience</h3></span>
+            <span className="material-symbols-outlined flex topSpan" ><h3  className="sectionHeader" >work Experience</h3></span>
                 <p>{data.experience.company}</p>
                 <p>{data.experience.title}</p>
-                <p>{data.experience.location}</p>
                 <p>{data.experience.description}</p>
-                <p>{data.experience.start}</p>
-                <p>{data.experience.end}</p>
+                <p className="dateRange">{data.experience.start} - {data.experience.end} <br></br>{data.experience.location}</p>
             </div>
+
+            
         </div>
     )    
 }
