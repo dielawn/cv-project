@@ -81,3 +81,12 @@ header {
   padding: 10px;
   margin: none;
 }
+.dataTxt {
+  grid-column: 2 / 4;
+}
+.descTxt {
+  grid-column: 1 / 4;
+}
+.bName {
+  font-weight: 800;
+}
