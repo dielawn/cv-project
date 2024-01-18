@@ -24,7 +24,8 @@ function App() {
         start: defaultInfo.education.start,
         end: defaultInfo.education.end,
       },
-      experience:{ 
+      experience:[
+        { 
         company: defaultInfo.experience[0].company,
         title: defaultInfo.experience[0].title,
         location:  defaultInfo.experience[0].location,
@@ -32,6 +33,15 @@ function App() {
         start: defaultInfo.experience[0].start,
         end: defaultInfo.experience[0].end,
       },
+      { 
+        company: defaultInfo.experience[1].company,
+        title: defaultInfo.experience[1].title,
+        location:  defaultInfo.experience[1].location,
+        description:  defaultInfo.experience[1].description,
+        start: defaultInfo.experience[1].start,
+        end: defaultInfo.experience[1].end,
+      },
+    ]
 
       
     }
