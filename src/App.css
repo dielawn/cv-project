@@ -11,16 +11,15 @@
 .formDiv {
   outline: solid 1px white;
   border-radius: 10px;
-  max-width: 30%;
-  padding: 100px;
+  min-width: 20vw;
+  padding: 50px;
   margin: 25px;
   text-align: end;
   max-height: 550px;
 }
 .cvDiv {
-  max-width: 50%; 
+  min-width: 35vw;
   color: black;
-  border-radius: 10px;
 }
 
 .flexColumn {
@@ -40,30 +39,39 @@ header {
   padding: 20px;  
   color: white;
   display: grid;  
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(1fr) );
   align-items: center;
   text-align: center;
   background-color:var(--colorTheme3);
+  
 }
 .name {
   grid-row: 1 / 2;
   grid-column: 1 / 4;
   text-align: end;
 }
-.educationDiv,
+.educationDiv {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr) );
+}
 .experienceDiv {
   background-color: whitesmoke;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+  grid-template-columns: repeat(3, minmax(200px, 1fr) );
 }
 .topSpan {
   grid-column: 1 / 4; 
 }
-.dateRange {
+.educationDiv > .dateRange {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+}
+.experienceDiv > .dateRange {
+  grid-row: 1 / 2;
 }
 
 .container {
@@ -82,17 +90,41 @@ header {
   margin: none;
 }
 .dataTxt {
-  grid-column: 2 / 4;
+  grid-column: 3 / 4;
+  
 }
 .descTxt {
   grid-column: 1 / 4;
+  border-bottom: solid 1px black;
+  padding: 0 60px 20px 60px;
 }
 .bName {
   font-weight: 800;
 }
-.visible {
-  display: block;
-}
+
 .hide {
   display: none;
 }
+button {
+  min-width: 100%;
+  margin: 10px;
+}
+.visible {
+  display: block;
+  animation: expand 500ms ease-in-out;
+  transform-origin: top;
+  }
+  
+  @keyframes expand {
+  0% {
+  transform: scaleY(0);
+  }
+  
+  70% {
+  transform: scaleY(1.1);
+  }
+  
+  100% {
+  transform: scaleY(1);
+  }
+  }

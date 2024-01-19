@@ -10,6 +10,8 @@ export const ExperienceForm = ({experience, updateInfo}) => {
     })
     console.log(eachEx)
 
+    let openCloseIcon = isFormOpen ? 'keyboard_arrow_up' : 'keyboard_arrow_down'
+
     const handleClick = () => {
         setOpenClose(!isFormOpen)        
     }
@@ -18,8 +20,8 @@ export const ExperienceForm = ({experience, updateInfo}) => {
 
     return (
         <div>
-            <OpenCloseBtn category='Experience' isFormOpen={isFormOpen}  onClick={handleClick}/>
-            <form className={isFormOpen ? "hide" : "visible"} >
+            <OpenCloseBtn category='Experience' isFormOpen={isFormOpen}  onClick={handleClick} openCloseIcon={openCloseIcon}/>
+            <form className={isFormOpen ? "visible" : "hide"} >
                 
                 < CreateForm category='experience' data={experience} inputs={formInputs} updateInfo={updateInfo}/>
             </form>

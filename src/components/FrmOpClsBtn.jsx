@@ -1,7 +1,6 @@
+import { useState } from "react"
 
-export const OpenCloseBtn = ({category, isOpen, onClick}) => {
-
-    let openCloseIcon = isOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_up'
+export const OpenCloseBtn = ({category, isOpen, onClick, openCloseIcon}) => {
 
     return (
         <button  onClick={onClick}>
