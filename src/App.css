@@ -90,3 +90,9 @@ header {
 .bName {
   font-weight: 800;
 }
+.visible {
+  display: block;
+}
+.hide {
+  display: none;
+}

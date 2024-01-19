@@ -1,13 +1,14 @@
-import { useState } from "react"
 
-export const OpenCloseBtn = ({category}) => {
-    const [isOpen, setOpenClose] = useState(false)
+export const OpenCloseBtn = ({category, isOpen, onClick}) => {
 
-    const handleClick = () => {
-        setOpenClose(!isOpen)
-    }
+    let openCloseIcon = isOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_up'
 
     return (
-        <button onClick={handleClick}>{category}</button>
+        <button  onClick={onClick}>
+            <h2 className="formCategory">
+                {category}
+                <span className="material-symbols-outlined">{openCloseIcon}</span>
+            </h2>
+        </button>
     )
 }
