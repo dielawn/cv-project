@@ -1,4 +1,3 @@
-import { useState } from "react"
 
 export const OpenCloseBtn = ({category, isOpen, onClick, openCloseIcon}) => {
 

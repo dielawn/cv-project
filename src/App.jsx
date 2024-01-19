@@ -5,6 +5,13 @@ import { CV } from './CV';
 import './App.css'
 import { EducationForm } from './components/EducationForm';
 import { ExperienceForm } from './components/ExperienceForm';
+import { Form } from './components/Form';
+import { SelectBtns } from './components/SelectBtns';
+
+const personalInputs = ['name', 'email', 'phone', 'address']
+const experienceInputs = ['company', 'title', 'location', 'description', 'start', 'end'] 
+const educationInput = ['school', 'degree', 'location', 'start', 'end']
+
 
 function App() {
   const [data, setData] = useState(
@@ -66,7 +73,13 @@ const updateInfo = (category, property, value) => {
     <div className="formDiv flexColumn">
       <PersonalInfoForm data={data.info} updateInfo={updateInfo} />
       <EducationForm education={data.education} updateInfo={updateInfo} />
-      <ExperienceForm experience={data.experience}updateInfo={updateInfo} />
+      
+      {data.experience.map((experience, index) => (
+      
+
+        <ExperienceForm key={index} experience={experience} updateInfo={updateInfo} />
+      
+      ))}
     </div>
    
     <div className="cvDiv">

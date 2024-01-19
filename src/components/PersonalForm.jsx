@@ -16,8 +16,7 @@ export const PersonalInfoForm = ({data, updateInfo}) => {
         <div>
             <OpenCloseBtn category='Personal Info' isFormOpen={isFormOpen} onClick={handleClick} openCloseIcon={openCloseIcon} />
             <form className={isFormOpen ? "visible" : "hide"}>
-            <CreateForm category='info' inputs={formInputs} data={data} updateInfo={updateInfo} />
-           
+            <CreateForm category='info' inputs={formInputs} data={data} updateInfo={updateInfo} />           
             </form>
         </div>
     )
